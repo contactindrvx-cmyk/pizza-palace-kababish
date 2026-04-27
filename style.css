@@ -1,0 +1,474 @@
+/* ══════════════════════════════════════════════════════════════
+   Pizza Palace & Kababish Bar.B.Q - Complete Stylesheet
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Google Font ── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ── Hero Section ── */
+.hero-bg {
+  background: linear-gradient(160deg, #0a0a0a 0%, #1c0000 55%, #0a0a0a 100%);
+  padding: 3.5rem 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-bg {
+    padding: 5rem 1rem;
+  }
+}
+
+.hero-content {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.brand-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.brand-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .brand-title {
+    font-size: 3rem;
+  }
+}
+
+.brand-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .brand-subtitle {
+    font-size: 1.875rem;
+  }
+}
+
+/* Service badges */
+.svc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.svc-badge {
+  display: inline-block;
+  background: rgba(220,38,38,0.15);
+  border: 1px solid #dc2626;
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+}
+
+/* Hours badge */
+.hours-badge {
+  display: inline-block;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact links */
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .contact-row {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: #fbbf24;
+}
+
+/* CTA Button */
+.cta-btn {
+  display: inline-block;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.75rem 2.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.05);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   STICKY CATEGORY NAVIGATION
+   ══════════════════════════════════════════════════════════════ */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #0d0d0d;
+  border-bottom: 2px solid #dc2626;
+  padding: 0.75rem 0;
+}
+
+.cat-scroll {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0 1rem 0.25rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.cat-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 2px solid #333;
+  background: transparent;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cat-btn:hover {
+  border-color: #dc2626;
+  color: #dc2626;
+}
+
+.cat-btn.active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #fff;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   MENU SECTIONS
+   ══════════════════════════════════════════════════════════════ */
+.menu-main {
+  background: #0a0a0a;
+  padding: 2.5rem 1rem;
+}
+
+.menu-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fbbf24;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Category sections - show/hide */
+.category-section {
+  display: none;
+}
+
+.category-section.active {
+  display: block;
+}
+
+/* Menu grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   CARD - Single source of truth for layout (MOBILE FIX)
+   ══════════════════════════════════════════════════════════════ */
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 0.625rem;
+  padding: 1rem;
+  
+  /* CRITICAL: Stack children vertically */
+  display: flex;
+  flex-direction: column;
+  
+  /* CRITICAL: Prevent ANY child from overflowing */
+  overflow: hidden;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  border-color: #dc2626;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.2);
+}
+
+/* Item name */
+.card-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.4;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.25rem;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+/* Description */
+.card-desc {
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   PRICE - ALWAYS BELOW TITLE, NEVER BESIDE (MOBILE FIX)
+   ══════════════════════════════════════════════════════════════ */
+.card-price {
+  display: block;           /* BLOCK = own line, never inline */
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fbbf24;           /* Yellow/Gold color */
+  margin: 0 0 0.85rem 0;
+  margin-top: 5px;          /* Per user request */
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   WHATSAPP BUTTON - FULL WIDTH (MOBILE FIX)
+   ══════════════════════════════════════════════════════════════ */
+.wa-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;              /* FULL width of the card */
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.4rem;
+  background-color: #25d366;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  margin-top: auto;         /* Stick to bottom if card is stretched */
+}
+
+.wa-btn:hover {
+  background-color: #1ead50;
+  transform: scale(1.02);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════════════════════════════ */
+.footer {
+  background: #080808;
+  border-top: 2px solid #dc2626;
+  padding: 2.5rem 1rem;
+}
+
+.footer-container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-title {
+  color: #fbbf24;
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer-subtitle {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.footer-text {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #fbbf24;
+}
+
+.footer-link.wa:hover {
+  color: #25d366;
+}
+
+.footer-address {
+  display: flex;
+  gap: 0.5rem;
+  color: #9ca3af;
+  font-size: 0.875rem;
+}
+
+.footer-copyright {
+  border-top: 1px solid #222;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.75rem;
+}
+
+.footer-copyright p {
+  margin-bottom: 0.25rem;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   FLOATING WHATSAPP BUTTON
+   ══════════════════════════════════════════════════════════════ */
+.float-wa {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 3.25rem;
+  height: 3.25rem;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.5);
+  z-index: 100;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.float-wa:hover {
+  background: #1ead50;
+  transform: scale(1.1);
+}
+
+/* ══════════════════════════════════════════════════════════════
+   UTILITY CLASSES
+   ══════════════════════════════════════════════════════════════ */
+.text-center { text-align: center; }
+.flex-shrink-0 { flex-shrink: 0; }
